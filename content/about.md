@@ -7,7 +7,7 @@ cover = "img/myself.jpg"
 
 My name is José Diogo Viana, but everyone calls me **/(Zé|Diogo)/**.
 
-At **[finiam](https://finiam.com)**, I am helping with the mission to change the financial world, by working with other businesses to launch their products to market.
+I'm based in Portugal 🇵🇹 and at the moment I work at **[finiam](https://finiam.com)**, helping with the mission to change the financial world, by working with other businesses to launch their products to market.
 
 I work as a Fullstack Developer, but the Backend is where I spend most of my day, using Elixir + Phoenix or Ruby on Rails. I am always looking forward to learn new and cool things, either work related or just general knowledge.
 

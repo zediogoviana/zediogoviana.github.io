@@ -2,6 +2,28 @@
 title = "Locations"
 +++
 
-<h1>Beer Bottles & Travel Map</h1>
+<h1>Beer Bottles Map</h1>
 
-<iframe width="100%" height="450" frameborder="0" title="Felt Map" src="https://felt.com/embed/map/Beer-Travel-Map-E9Bfaa9CUKRie9AwokRQK9CVBB?lat=45.08913&lon=6.937866&zoom=3"></iframe>
+<p>
+  What does this <b>Beer Bottle</b> Map mean? Well, I collect Beer Bottles from different countries, and I can only add them to the collection if they were bought in the country of origin. So to keep track of all the locations, I have a map using <a href="https://felt.com">Felt</a>. Some of them were brought in by friends and family, so a <b>cheers 🍺</b> to all of those who have contributed!
+</p>
+
+<div class="iframe-container">
+    <div class="iframe-loading" id="loading">Loading</div>
+
+    <iframe
+      id="beer-map"
+      style="opacity: 0;"
+      width="100%"
+      height="450"
+      frameborder="0"
+      title="Felt Map"
+      sandbox="allow-same-origin allow-scripts"
+      src="https://felt.com/embed/map/Beer-Travel-Map-E9Bfaa9CUKRie9AwokRQK9CVBB?lat=45.08913&lon=6.937866&zoom=2"
+      onload="
+        document.getElementById('loading').style.display='none';
+        document.getElementById('beer-map').style.opacity='1';
+      "
+    >
+    </iframe>
+</div>

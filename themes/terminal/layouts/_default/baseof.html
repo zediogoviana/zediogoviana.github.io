@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ $.Site.Language }}">
+
+<meta
+  http-equiv="Content-Security-Policy"
+  content="script-src https://gc.zgo.at 'self' 'unsafe-inline'; img-src https://zediogoviana.goatcounter.com/count 'self';"/>
+<script data-goatcounter="https://zediogoviana.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <head>
   {{ block "title" . }}
     <title>{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }} :: {{ $.Site.Title }}{{ end }}</title>

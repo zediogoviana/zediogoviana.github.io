@@ -1,0 +1,17 @@
+.iframe-container {
+    position: relative;
+}
+
+.iframe-loading {
+    left: 0;
+    position: absolute;
+    top: 0;
+    border: 1px solid white;
+
+    height: 450px;
+    width: 100%;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

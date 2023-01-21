@@ -5,8 +5,6 @@
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="{{ .Permalink }}" />
 
-{{ template "_internal/google_analytics.html" . }}
-
 {{ $defaultStyles := resources.Get "css/style.scss" }}
 <!-- Local Theme Variables -->
 {{ if and (isset .Params "color") (not (eq .Params.color "")) }}
