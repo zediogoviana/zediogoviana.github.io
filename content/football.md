@@ -1,6 +1,6 @@
 +++
 title = "Football"
-description="During my free time, I’m a football goalkeeper coach 🧤. Up until this moment I've been a **one-club man**, and will most likely continue this way."
+description="During my free time, I’m a football goalkeeper coach 🧤. Up until this moment I've been a one-club man, and will most likely continue this way."
 +++
 
 During my free time, I’m a football goalkeeper coach 🧤. Up until this moment I've been a **one-club man**, and will most likely continue this way.

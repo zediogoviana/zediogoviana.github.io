@@ -58,9 +58,9 @@ We decided to inspect the **BAYC** contract. Looking at their [OpenSea collectio
 
 The following plots represent a histogram for each attribute type of **Clothes** and **Eyes**, respectively.
 
-{{< figure src="https://cdn.sanity.io/images/5aprln8a/production/820bcb3d4e2e972378bab2dae9000ca4d5f04e28-1800x720.png?w=650" alt="Clothes histogram." position="center" style="border-radius: 8px;" caption="Clothes attribute histogram">}}
+{{< figure src="https://cdn.sanity.io/images/5aprln8a/production/820bcb3d4e2e972378bab2dae9000ca4d5f04e28-1800x720.png?w=650" alt="Clothes histogram." position="center" style="border-radius: 8px;" caption="Clothes attribute histogram"  captionStyle="border-radius: 8px;">}}
 
-{{< figure src="https://cdn.sanity.io/images/5aprln8a/production/6552e5eb344e18f309229a2423abd6da7381be46-1800x720.png?w=650" alt="Eyes histogram." position="center" style="border-radius: 8px;" caption="Eyes attribute histogram">}}
+{{< figure src="https://cdn.sanity.io/images/5aprln8a/production/6552e5eb344e18f309229a2423abd6da7381be46-1800x720.png?w=650" alt="Eyes histogram." position="center" style="border-radius: 8px;" caption="Eyes attribute histogram" captionStyle="border-radius: 8px;">}}
 
 We won't discuss if they used some mathematical distribution to calculate each amount or if it was eyeballing, but you can try to estimate if this really uses any math as the base.
 

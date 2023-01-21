@@ -21,5 +21,8 @@
     style="object-fit: cover;"
     class="post-cover"
     alt="{{ .Title | plainify | default " " }}"
-    title="{{ .Params.CoverCredit |plainify|default "Cover Image" }}" />
+    title="{{ .Params.CoverCredit |plainify|default "Cover Image" }}"
+    height="100%"
+    width="100%"
+  />
 {{- end }}
