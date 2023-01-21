@@ -5,8 +5,11 @@ author = "Zé Diogo"
 cover = "img/keyboard-cover.jpeg"
 coverCredit = "darts and target"
 keywords = ["heatmap", "keyboard", "karabiner", "elixir"]
-description = "After joining Finiam, I started looking more into how I used my keyboard, and how I could become more efficient with it. So I decided to make a heatmap of my keystrokes using Elixir, and then create aliases or easier configurations for things that I identify as the most used with the help of Karabiner-Elements." 
+description = "After joining Finiam, I started looking more into how I used my keyboard, and how I could become more efficient with it. So I decided to make a heatmap of my keystrokes using Elixir, and then create aliases or easier configurations for things that I identify as the most used with the help of Karabiner-Elements."
+canonical="https://blog.finiam.com/blog/keyboard-heatmap-and-customizing-keys" 
 +++
+
+***(Originally posted [here](https://blog.finiam.com/blog/keyboard-heatmap-and-customizing-keys))***
 
 For the last 5 years, I've been using an Apple Magic Keyboard. There wasn't any major reason to be using it, except having the same layout of my laptop, but it did the job pretty nicely.
 

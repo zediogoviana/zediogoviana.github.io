@@ -5,8 +5,11 @@ author = "Zé Diogo"
 cover = "img/quantum-cover.jpeg"
 coverCredit = "a cat upside down"
 keywords = ["quantum computing", "financial", "monte carlo algorithm", "circuit composer"]
-description = "With Quantum Computing we are in a similar phase as Engineers and Computer Scientists were in the '40s or '50s, developing the first classical computers. I don't believe that quantum computers can fully replace our classical ones, but they surely will have a major role in our lives in the future, and we are just at the beginning." 
+description = "With Quantum Computing we are in a similar phase as Engineers and Computer Scientists were in the '40s or '50s, developing the first classical computers. I don't believe that quantum computers can fully replace our classical ones, but they surely will have a major role in our lives in the future, and we are just at the beginning."
+canonical="https://blog.finiam.com/blog/quantum-computing-in-the-financial-world" 
 +++
+
+***(Originally posted [here](https://blog.finiam.com/blog/quantum-computing-in-the-financial-world))***
 
 ## Introduction to Quantum computing
 

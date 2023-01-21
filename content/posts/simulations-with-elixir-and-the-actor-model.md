@@ -5,8 +5,11 @@ author = "Zé Diogo"
 cover = "img/simulations-cover.jpeg"
 coverCredit = "a man working in a wood workshop"
 keywords = ["elixir", "simulations", "actor model", "discrete events"]
-description = "A simulation of a game, weather, aerodynamic behavior, or any other action, has intrinsically the same goal - take a peek into the future and see how things will perform in real life. These simulations all require an extent of calculations and variables to take into account, but also a model that will elegantly run through them. Here we'll see how to use Elixir and the Actor Model in an example simulation." 
+description = "A simulation of a game, weather, aerodynamic behavior, or any other action, has intrinsically the same goal - take a peek into the future and see how things will perform in real life. These simulations all require an extent of calculations and variables to take into account, but also a model that will elegantly run through them. Here we'll see how to use Elixir and the Actor Model in an example simulation."
+canonical="https://blog.finiam.com/blog/simulations-with-elixir-and-the-actor-model" 
 +++
+
+***(Originally posted [here](https://blog.finiam.com/blog/simulations-with-elixir-and-the-actor-model))***
 
 Is there anyone else about to read this, as fascinated as I am by simulations? A simulation of a game, weather, aerodynamic behavior, or any other action, has intrinsically the same goal - take a peek into the future and see how things will perform in real life. 
 

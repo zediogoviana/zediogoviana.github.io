@@ -3,7 +3,13 @@
 <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else if .Description}}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
 <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}" />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="{{ .Permalink }}" />
+
+{{ if (isset .Params "canonical") }}
+  <link rel="alternate" href="{{ .Permalink }}" />
+  <link rel="canonical" href="{{ $.Params.Canonical }}" />
+{{ else }}
+  <link rel="canonical" href="{{ .Permalink }}" />
+{{ end }}
 
 {{ $defaultStyles := resources.Get "css/style.scss" }}
 <!-- Local Theme Variables -->

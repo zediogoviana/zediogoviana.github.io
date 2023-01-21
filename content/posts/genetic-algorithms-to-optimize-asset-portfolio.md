@@ -6,7 +6,10 @@ cover = "img/genetic-cover.jpeg"
 coverCredit = "a typewriter with genetic algorithms steps"
 keywords = ["elixir", "genetic", "algorithms", "asset", "portfolio"]
 description = "On the last weekend of October, we (finiam) participated in ETHLisbon, an Ethereum-related hackathon, and for the last few weeks I had been reading **Genetic Algorithms in Elixir** by Sean Moriarity, and I was hooked on giving them a try in a use case outside the book." 
+canonical="https://blog.finiam.com/blog/genetic-algorithms-to-optimize-asset-portfolio" 
 +++
+
+***(Originally posted [here](https://blog.finiam.com/blog/genetic-algorithms-to-optimize-asset-portfolio))***
 
 On the last weekend of October, we ([finiam](https://finiam.com)) participated in [ETHLisbon](https://www.ethlisbon.org/), an Ethereum-related hackathon, and our submitted project, [*Matusalem*](https://taikai.network/ethlisbon/hackathons/ethlisbon-2022/projects/cl9ssst4a8562890118gtnyuahe/idea), resembled a pension fund scheme but only for Crypto Assets - I won't dwell here into much details of the project, as we'll probably have a dedicated blog post explaining it.
 

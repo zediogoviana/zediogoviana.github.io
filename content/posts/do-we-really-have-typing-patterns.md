@@ -5,8 +5,11 @@ author = "Zé Diogo"
 cover = "img/typing-dna-cover.jpeg"
 coverCredit = "colorful test tubes"
 keywords = ["typingdna", "patterns", "2fa"]
-description = "Some time ago, we found TypingDNA. It was a different approach to MFA (multi-factor authentication) or SCA (strong customer authentication), and so we got interested in giving it a try between ourselves and see how it works." 
+description = "Some time ago, we found TypingDNA. It was a different approach to MFA (multi-factor authentication) or SCA (strong customer authentication), and so we got interested in giving it a try between ourselves and see how it works."
+canonical="https://blog.finiam.com/blog/do-we-really-have-typing-patterns" 
 +++
+
+***(Originally posted [here](https://blog.finiam.com/blog/do-we-really-have-typing-patterns))***
 
 Some time ago, we found [**TypingDNA**](https://www.typingdna.com/). It was a different approach to MFA (multi-factor authentication) or SCA (strong customer authentication), and so we got interested in giving it a try between ourselves and see how it works.
 

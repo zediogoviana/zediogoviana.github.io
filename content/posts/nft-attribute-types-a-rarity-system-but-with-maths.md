@@ -5,8 +5,11 @@ author = "Zé Diogo"
 cover = "img/rarities-cover.jpeg"
 coverCredit = "a gold fish"
 keywords = ["nft", "crypto", "rarities", "web3", "attributes"]
-description = "We want to pre-generate the metadata for a set of NFTs that will have several attributes, using mathematical distributions. This metadata has information on the traits of that specific NFT, in this case, each attribute type and the respective value." 
+description = "We want to pre-generate the metadata for a set of NFTs that will have several attributes, using mathematical distributions. This metadata has information on the traits of that specific NFT, in this case, each attribute type and the respective value."
+canonical="https://blog.finiam.com/blog/nft-attribute-types-a-rarity-system-but-with-maths" 
 +++
+
+***(Originally posted [here](https://blog.finiam.com/blog/nft-attribute-types-a-rarity-system-but-with-maths))***
 
 At this point in time, almost everyone has heard about NFTs. Even if you don't really understand how they work, you associate them with images of Apes or Cats. Check a couple of them, just for reference: 
 
