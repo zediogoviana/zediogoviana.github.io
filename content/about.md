@@ -1,6 +1,13 @@
 +++
 title = "About"
 cover = "img/myself.jpg"
+description="""
+Hello there!
+
+My name is José Diogo Viana, but everyone calls me **/(Zé|Diogo)/**.
+
+I'm based in Portugal 🇵🇹 and at the moment I work at **[finiam](https://finiam.com)**, helping with the mission to change the financial world, by working with other businesses to launch their products to market.
+"""
 +++
 
 # Hello there!
