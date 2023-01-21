@@ -18,6 +18,7 @@
 {{if $cover -}}
   <!-- Cover image found -->
   <img src="{{ $cover }}"
+    style="object-fit: cover;"
     class="post-cover"
     alt="{{ .Title | plainify | default " " }}"
     title="{{ .Params.CoverCredit |plainify|default "Cover Image" }}" />

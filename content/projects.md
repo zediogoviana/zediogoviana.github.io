@@ -9,7 +9,7 @@ Most of these are available on my **[GitHub page](https://github.com/zediogovian
 ## Personal Projects
 
 - **[ThePipeTracker](https://www.tipoprado.thepipetracker.com)** \
-A Production line tracking for SMEs. It's a Web Application for clients of an SME to track orders/packages inside a production pipeline. Together with production analysis plots and a dedicated module for delivery date prediction using Discrete Events Simulation theory (I wrote a blog post about this [here]). \
+A Production line tracking for SMEs. It's a Web Application for clients of an SME to track orders/packages inside a production pipeline. Together with production analysis plots and a dedicated module for delivery date prediction using Discrete Events Simulation theory (I wrote a blog post about this [here](https://zediogoviana.github.io/posts/simulations-with-elixir-and-the-actor-model/)). \
 API built with Elixir and Frontend built with React. Running in production for 3+ years and still helping the company with production efficiency. \
 **[Jul 2019 - Present]** 
 

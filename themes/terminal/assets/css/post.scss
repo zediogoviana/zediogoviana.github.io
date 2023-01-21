@@ -77,6 +77,8 @@
     background: transparent;
     margin: 40px 0;
     padding: 20px;
+    max-height: 400px;
+    width: 100%;
 
     @media ($phone) {
       padding: 10px;
