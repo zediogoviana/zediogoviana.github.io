@@ -35,6 +35,11 @@
     color: transparentize($accent, .2);
   }
 
+  &-meta-simple {
+    font-size: 1rem;
+    color: transparentize($accent, .2);
+  }
+
   &-title {
     $border: 3px dotted $accent;
     position: relative;
@@ -51,6 +56,18 @@
       width: 100%;
       border-bottom: $border;
     }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &-title-simple {
+    position: relative;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin: 0 0 5px;
+    padding-bottom: 0px;
 
     a {
       text-decoration: none;

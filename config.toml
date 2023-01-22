@@ -14,7 +14,7 @@ paginate = 5
   themeColor = "blue"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 4
+  showMenuItems = 5
 
   # show selector to switch language
   showLanguageSelector = false
@@ -68,6 +68,7 @@ paginate = 5
     title = "zediogoviana"
     subtitle = """
       Welcome stranger!
+      My name is José Diogo Viana, but everyone calls me /(Zé|Diogo)/.
       In this place you can find posts about random things I explored either in my free time or during my random discoveries at finiam.
       Look around the post list or other website pages to know a bit more about what I do: 👨🏼‍💻🍺⚽️
     """
@@ -105,6 +106,10 @@ paginate = 5
         identifier = "football"
         name = "Football"
         url = "/football"
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts"
 
 # [module]
 #   # In case you would like to make changes to the theme and keep it locally in you repository,
