@@ -41,5 +41,5 @@ A simple web app that transmits E2E encrypted messages safely.
 
 &nbsp;
 - **[Detris](https://github.com/finiam/ethamsterdam-detris)**\
-An hackathon project we did for [ETHAmsterdam](https://amsterdam.ethglobal.com/) in April 2022. It's an Tetris NFT that you can play on IPFS or platforms like OpenSea. With this project we were one of the 13 finalists and winners of the hackathon. 
+An hackathon project we did for [ETHAmsterdam](https://amsterdam.ethglobal.com/) in April 2022. Detris, is a playable NFT that serves as an interface to play Tetris. What does that mean? It means that the NFT can run an instance of a game of Tetris. The asset the Detris NFT is retrieving is actually our implementation of the game of Tetris. We use an `iframe` to display it wherever we want. And since OpenSea supports iframe too, we can actually [play Tetris on OpenSea](https://opensea.io/assets/ethereum/0xbdc105c068715d57860702da9fa0c5ead11fba51/2). With this project we were one of the 13 finalists and winners of the hackathon. We ended up winning a monetary prize per team member, and got the chance to present it on stage, in front of hundreds of others participants! It was a really cool experience. (Check [this blogpost by Davide](https://blog.finiam.com/blog/finiam-goes-to-amsterdam) to know more in detail.)
 
