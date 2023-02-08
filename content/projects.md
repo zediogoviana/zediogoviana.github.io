@@ -31,13 +31,13 @@ A workshop with [José Resende](https://zepedroresende.github.io/) also from **[
 
 &nbsp;
 - **[Keyboard Heatmap](https://github.com/zediogoviana/keyboard-heatmap)**\
-Simple Elixir script to obtain an heatmap of your keystrokes. Keystrokes can be collected for the amount of time you choose.
+It's an Elixir script to obtain an heatmap of your keystrokes. Keystrokes can be collected for the amount of time you choose. The idea is to generate an image of any keyboard layout, and for that, it's possible to add the configuration for new keyboard types and models, and then just choose the one we want to see "painted". It uses [zamith/mogrify_draw](https://github.com/zamith/mogrify_draw) to draw each key.
 
 
 ## Finiam's Open Source Projects
 
 - **[Secrets](https://github.com/finiam/secrets.finiam.com)**\
-A simple web app that transmits E2E encrypted messages safely. 
+A simple web app that transmits E2E encrypted messages safely. The way it works is by encrypting the user info locally and then generating a URL with a private key embbeded on it, through the hash in the URL, which is never sent to servers by browsers or any HTTP client. When you generate a secret, the webapp posts the encrypted information to the API, which in turn stores that encrypted information and assigns it an `ID` that we like to call `roomId`. The API is built with Elixir's Phoenix. 
 
 &nbsp;
 - **[Detris](https://github.com/finiam/ethamsterdam-detris)**\
