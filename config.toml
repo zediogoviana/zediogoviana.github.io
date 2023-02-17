@@ -60,7 +60,7 @@ paginate = 5
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
   # do not include @
   creator = "zediogoviana"
-  site = ""
+  site = "http://zediogoviana.github.io/"
 
 [languages]
   [languages.en]
