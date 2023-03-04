@@ -14,7 +14,7 @@ paginate = 5
   themeColor = "blue"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 5
+  showMenuItems = 6
 
   # show selector to switch language
   showLanguageSelector = false
@@ -100,7 +100,7 @@ paginate = 5
         url = "/locations"
       [[languages.en.menu.main]]
         identifier = "projects"
-        name = "Projects"
+        name = "Side Projects"
         url = "/projects"
       [[languages.en.menu.main]]
         identifier = "football"
@@ -108,8 +108,12 @@ paginate = 5
         url = "/football"
       [[languages.en.menu.main]]
         identifier = "posts"
-        name = "Posts"
+        name = "Post List"
         url = "/posts"
+      [[languages.en.menu.main]]
+        identifier = "other-media"
+        name = "Other Media"
+        url = "/other-media"
 
 # [module]
 #   # In case you would like to make changes to the theme and keep it locally in you repository,
