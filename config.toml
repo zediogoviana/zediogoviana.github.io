@@ -35,7 +35,7 @@ paginate = 5
   showLastUpdated = false
 
   # set a custom favicon (default is a `themeColor` square)
-  # favicon = "favicon.ico"
+  favicon = "img/duck.ico"
 
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
@@ -80,7 +80,7 @@ paginate = 5
     readOtherPosts = "Read other posts"
     newerPosts = "Newer posts"
     olderPosts = "Older posts"
-    missingContentMessage = "Page not found..."
+    missingContentMessage = "Oh no! This page doesn't exist... "
     missingBackButtonLabel = "Back to home page"
     minuteReadingTime = "min read"
     words = "words"
