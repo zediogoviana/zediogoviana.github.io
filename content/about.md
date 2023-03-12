@@ -33,7 +33,7 @@ Look around the website to discover more things in detail.
 **[Sep 2020 - Present]** 
 
 - Software Engineer - Apprenticeship \
-[Subvisual](https://finiam.com) \
+[Subvisual](https://subvisual.com/) \
 **[May 2020 - Jul 2020]**
 
 ## Education
