@@ -1,0 +1,12 @@
+
+{{ if .Get "src" }}
+  <div style="position: relative; padding-bottom: 220px; height: 0; overflow: hidden;">
+    <iframe
+      style="border: none;max-width: 100%;width:1px;min-width:100%;"
+      scrolling="no"
+      src="{{ .Get "src" | safeURL }}"
+      height="170"
+    >
+    </iframe>
+  </div>
+{{ end }}
