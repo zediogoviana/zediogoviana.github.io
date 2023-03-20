@@ -60,14 +60,13 @@ paginate = 5
   # see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution
   # do not include @
   creator = "zediogoviana"
-  site = "http://zediogoviana.github.io/"
+  site = "https://zediogoviana.github.io/"
 
 [languages]
   [languages.en]
     languageName = "English"
     title = "zediogoviana"
     subtitle = """
-      Welcome stranger!
       My name is José Diogo Viana, but everyone calls me /(Zé|Diogo)/.
       In this place you can find posts about random things I explored either in my free time or during my random discoveries at finiam.
       Look around the post list or other website pages to know a bit more about what I do: 👨🏼‍💻🍺⚽️
