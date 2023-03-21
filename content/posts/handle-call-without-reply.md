@@ -10,9 +10,9 @@ description = "In this post you get an insight into how you can turn asynchronou
 
 This is the first issue of the series of blog posts that I introduced in my [Recapping 2022 and a look into 2023](https://zediogoviana.github.io/posts/2022-recap-and-a-look-into-2023/) post. To save you from reading the whole thing if you haven't done it yet, an **8bit-sized** post is just a smaller type of post to share interesting findings, and distinguish them from the longer ones I sometimes write, and because `8bits = 1byte` 🤓
 
-Now, diving into what matters... You may have encountered a situation where you have a `GenServer` serving as a *"Proxy"* for another Process/External Application. If we're interacting with an HTTP API, for example, we can easily obtain a synchronous response. Imagine an *Actor* that interacts with a `GenServer.call` function, and then it interacts with an external HTTP API, it's possible to do `{:reply, response, state}` at the end of the respective `handle_call`. Now, imagine the situation where we are interacting with a different Process that will do some extra asynchronous processing, or we are communicating with an external App via sockets... Can you already spot the problem? In that case, we can't use `GenServer.call` as it can't obtain a response to reply to the caller. Well, that's not entirely true, as we'll see!
+Now, diving into what matters... You may have encountered a situation where you have a `GenServer` serving as a *"Proxy"* for another Process/External Application. If we're interacting with an HTTP API, for example, we can easily obtain a synchronous response. Imagine an *Actor* that interacts with a `GenServer.call` function, and then it interacts with an external HTTP API, it's possible to do `{:reply, response, state}` at the end of the respective `handle_call`. Now, imagine the situation where we are interacting with a different Process that will do some extra asynchronous processing, or we are communicating with an external App via sockets. Can you already spot the problem? In that case, it's possible to assume we can't use `GenServer.call` as it can't obtain a response to reply to the caller. Well, that's not entirely true, as we'll see!
 
-Looking at the scheme below, we have two different situations highlighted. In the first one, the *Actor* makes a request. This request is asynchronous, and the *Actor* knows about it, and it's not worried about when a response will arrive. In the second situation, that *Actor* needs to make a synchronous request (either because of a better UX of the App, or some other technical constraint), but the external process is still doing the work asynchronously.
+Looking at the scheme below, we have two different situations highlighted. In the first one, the *Actor* makes a request. This request is asynchronous, and the *Actor* knows about it, and it's not worried about when a response will arrive. In the second situation, that *Actor* needs to make a synchronous request (either because of a better UX of the App, or some other technical constraint), but the external process is still doing the work asynchronously. The **yellow** blocks represent asynchronous waiting time, while the dashed line represents synchronous time.
 
 {{< image src="../../img/8bit-size1/async-requests.png" alt="example of an interaction between a user and a genserver" position="center" style="border-radius: 8px; width: 75%;">}}
 
@@ -21,7 +21,7 @@ To make this work, the `GenServer` request needs to be ***blocking*** as with a 
 ```elixir
 # a Client Function of a GenServer module
 def synchronous_request(pid) do
-  send(pid, :perform_asynchronous_request) # |1| Client function to make a synch request
+  send(pid, :perform_asynchronous_request) # |1| Client function to make a sync request
 
   GenServer.call(pid, :wait_for_answer, 60_000) # |3| We make the call with no reply here!
   # |6| This function returns in last
@@ -29,13 +29,14 @@ end
 
 def handle_call(:wait_for_answer, from, state) do
   new_state = Map.merge(state, %{from_pid: from})
+  
   {:noreply, new_state} # |4| Note that it doesn't :reply here. We just store who the caller was
 end
 
 def handle_info(:perform_asynchronous_request, state) do
-    ExternalProccess.make_asynchronous_request()
+  ExternalProccess.make_asynchronous_request()
 
-    {:noreply, state}  # |2| The Asynchronous Processing/Request is triggered
+  {:noreply, state}  # |2| The Asynchronous Processing/Request is triggered
 end
 
 def handle_info({:asynchronous_request_response, res}, state) do
@@ -70,7 +71,7 @@ defmodule ExternalProcess do
 end
 ```
 
-So, yeah, it's pretty much this... No weird code laying around, just taking advantage of `GenServer.reply/2`. Check the Documentation for [`reply/2`](https://hexdocs.pm/elixir/1.12/GenServer.html#reply/2) and [`handle_call/3`](https://hexdocs.pm/elixir/1.12/GenServer.html#c:handle_call/3) for the full perspective and if it works for your use case.
+So, yeah, it's pretty much this. No weird code laying around, just taking advantage of `GenServer.reply/2`. Check the documentation for [`reply/2`](https://hexdocs.pm/elixir/1.12/GenServer.html#reply/2) and [`handle_call/3`](https://hexdocs.pm/elixir/1.12/GenServer.html#c:handle_call/3) for the full perspective and if it works for your use case.
 
 ## Things to take into account
 
@@ -78,6 +79,6 @@ So, yeah, it's pretty much this... No weird code laying around, just taking adva
 - You also need to be careful with [**Timeouts**](https://hexdocs.pm/elixir/1.12/GenServer.html#module-timeouts) and the possibility that the external App/Process can not answer on time!
 - Don't abuse this or `GenServers` in general. Do you even need a `GenServer`? [Here's a great post with some insights on their dangers](https://learn-elixir.dev/blogs/dangers-of-genservers).
 
-[^1]: Last time I checked, Erlang had a limit of simultaneously alive processes of 32768, by default. But this limit can be raised to at most 268435456 processes. [More info here](http://erlang.org/documentation/doc-5.8.4/doc/efficiency_guide/advanced.html)
+[^1]: Last time I checked, Erlang had a limit of simultaneously alive processes of 32768, by default. But this limit can be raised to at most 268435456 processes. [More info here](https://erlang.org/documentation/doc-5.8.4/doc/efficiency_guide/advanced.html)
 
 And that's all for this first edition of my **8bit-sized** posts. Hope you have liked it and, as always, see you in the next one 👋
