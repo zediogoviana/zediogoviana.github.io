@@ -3,7 +3,7 @@ title = "Recapping 2022 and a look into 2023"
 date = "2023-01-25" 
 author = "Zé Diogo" 
 cover = "img/recap.jpg"
-coverCredit = ""
+coverCredit = "a music cassette"
 keywords = ["recap", "finiam", "personal projects", "next year"]
 description = "It’s probably a bit too late to be making a 2022 recap, we are almost at the end of January, and when I post this there’s a chance it’s already February, but better late than never… Let’s dive into what happened in 2022, and then have a look into my 2023 plans." 
 +++
