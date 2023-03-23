@@ -76,6 +76,7 @@ So, yeah, it's pretty much this. No weird code laying around, just taking advant
 ## Things to take into account
 
 - Don't forget that a `GenServer` or any process in the BEAM can only handle 1 message at a time. This means that this approach can escalate into a problem really fast if you don't evaluate your situation first. When I first discovered and used this, I knew for sure that the given `GenServer` was unique per user currently active in a specific part of the Web App (and that we'd never exceed the maximum number of running processes[^1]). Also, each of these `GenServers` was expected to deal with new messages arriving at a fixed rate of ~4-7seconds, like a heartbeat, and any extra-ordinary load was most likely the result of a malicious user, that we could happily let clog his own (user) part of the system.
+- As pointed out by `derek-zhou` in this [ElixirForum reply](https://elixirforum.com/t/elixir-blog-posts/150/916), the example above only works if there can only be one unique client calling this `GenServer`. If there are several clients, then you need to keep track of which request comes from, so replies don't get misdirected, and clients are left hanging.
 - You also need to be careful with [**Timeouts**](https://hexdocs.pm/elixir/1.12/GenServer.html#module-timeouts) and the possibility that the external App/Process can not answer on time!
 - Don't abuse this or `GenServers` in general. Do you even need a `GenServer`? [Here's a great post with some insights on their dangers](https://learn-elixir.dev/blogs/dangers-of-genservers).
 
