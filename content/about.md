@@ -30,13 +30,17 @@ Feel free to reach out, and say `Hi` on one of the socials below 👋
 
 ## Work
 
-- Full Stack Software Engineer \
+- Full Stack Engineer \
 [Finiam](https://finiam.com) \
 **[Sep 2020 - Present]** 
 
-- Software Engineer - Apprenticeship \
+- Full Stack Engineer - Apprenticeship \
 [Subvisual](https://subvisual.com/) \
 **[May 2020 - Jul 2020]**
+
+- Founder & Full Stack Engineer \
+[ThePipeTracker](https://www.thepipetracker.com/) \
+**[Jun 2019 - Sep 2020]**
 
 ## Education
 
