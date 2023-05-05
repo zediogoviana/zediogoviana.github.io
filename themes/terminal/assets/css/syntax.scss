@@ -1,25 +1,3 @@
-code.language-css,
-code.language-scss,
-.token.boolean,
-.token.string,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.language-scss .token.string,
-.style .token.string,
-.token.attr-value,
-.token.keyword,
-.token.control,
-.token.directive,
-.token.statement,
-.token.regex,
-.token.atrule,
-.token.number,
-.token.inserted,
-.token.important {
-  color: $accent !important;
-}
-
 .token.tag-id,
 .token.atrule-id,
 .token.operator,
@@ -34,17 +12,7 @@ code.language-scss,
 .token.class-name,
 .token.constant,
 .token.symbol {
-  color: transparentize($accent, .3) !important;
-}
-
-.token.property,
-.token.function,
-.token.function-name,
-.token.deleted,
-code.language-javascript,
-code.language-html,
-.command-line-prompt > span:before {
-  color: mix($accent, #999, .9) !important;
+  color: transparentize($accent, .1) !important;
 }
 
 .token.selector,
@@ -57,7 +25,7 @@ code.language-html,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: rgba(255, 255, 255, .3) !important;
+  color: rgba(255, 255, 255, .6) !important;
 }
 
 .token.namespace {
