@@ -9,6 +9,8 @@ description = "Metamask is an Ethereum crypto wallet, and serves as a gateway to
 canonical="https://blog.finiam.com/blog/sign-in-with-metamask-using-liveview"
 +++
 
+***(Originally posted [here](https://blog.finiam.com/blog/sign-in-with-metamask-using-liveview))***
+
 There's a chance that you have heard of [*Metamask*](https://metamask.io/) in the past year or two. But, if you haven't, don't worry, as I'll try to explain it quickly. *Metamask* is an [*Ethereum*](https://ethereum.org/en/) crypto wallet, and serves as a gateway to *dApps* (decentralized Apps). *Coinbase* has the following definition for a crypto wallet:
 
 > Crypto wallets store your private keys, keeping your crypto safe and accessible. They also allow you to send, receive, and spend cryptocurrencies like Bitcoin and Ethereum.

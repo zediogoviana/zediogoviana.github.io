@@ -1,6 +1,7 @@
 +++
 title = "Side Projects"
 description="In this page you can check some of my Personal projects, together with others I help develop and maintain at finiam, outside our usual client work."
+keywords=["projects", "zediogoviana", "finiam", "elixir", "thepipetracker", "hackathons"]
 +++
 
 I've always been very pro-active and wanting to try out new things. So, in this page you can check some of my **Personal** projects, together with others I help develop and maintain at **[finiam](https://finiam.com)**, outside our usual client work.

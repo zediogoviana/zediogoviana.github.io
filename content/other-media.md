@@ -1,6 +1,7 @@
 +++
 title = "Other Media"
 description="In this page you can find a list of other things I have done online, but in a different media (talks/workshops, videos, podcasts, etc...)."
+keywords=["videos", "talks", "podcasts", "zediogoviana", "elixir", "neo4j"]
 +++
 
 Here you can find a list of other things I have done online, but in a different media (talks/workshops, videos, podcasts, etc...).

@@ -32,7 +32,8 @@ paginate = 5
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
-  showLastUpdated = false
+  # showLastUpdated = true
+  # enableGitInfo = true
 
   # set a custom favicon (default is a `themeColor` square)
   favicon = "img/duck.ico"
@@ -66,11 +67,7 @@ paginate = 5
   [languages.en]
     languageName = "English"
     title = "zediogoviana"
-    subtitle = """
-      My name is José Diogo Viana, but everyone calls me /(Zé|Diogo)/.
-      In this place you can find posts about random things I explored either in my free time or during my random discoveries at finiam.
-      Look around the post list or other website pages to know a bit more about what I do: 👨🏼‍💻🍺⚽️
-    """
+    subtitle = "My name is José Diogo Viana, but everyone calls me /(Zé|Diogo)/. In this place you can find posts about random things I explored either in my free time or during my random discoveries at finiam. Look around the post list or other website pages to know a bit more about what I do: 👨🏼‍💻🍺⚽️"
     owner = "zediogoviana"
     keywords = ["personal website", "development", "football", "beers", "zediogoviana"]
     copyright = ""
