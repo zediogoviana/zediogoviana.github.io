@@ -112,7 +112,7 @@ kW consumed from 13h-14h => ~ avg([0, 0.06, 0.172, 0.088]) = 0.08 kW
 => NOT sum([0, 0.06, 0.172, 0.088]) = 0.32 kW
 ```
 
-To solve this, and be able to analyse actual consumed/produced values, I converted the respective `Smart Cell` into code, and directly edited it. That enables us to do more complex operations than the "no-code". With the help of [DataFrame.put/4](https://hexdocs.pm/explorer/Explorer.DataFrame.html#put/4) and [Series.transform/2](https://hexdocs.pm/explorer/Explorer.Series.html#transform/2), you can easily make extra calculations on top of existing columns to create new ones.
+To be able to analyse actual consumed/produced values, I converted the respective `Smart Cell` into code, and directly edited it. That enables us to do more complex operations than the "no-code". With the help of [DataFrame.put/4](https://hexdocs.pm/explorer/Explorer.DataFrame.html#put/4) and [Series.transform/2](https://hexdocs.pm/explorer/Explorer.Series.html#transform/2), you can easily make extra calculations on top of existing columns to create new ones.
 
 ```elixir
 convert_to_hour = fn time ->
@@ -196,6 +196,6 @@ The point here is that I could use one of these tools to also make any sort of p
 
 When I started working on this, it was probably the second time I used **Livebook**, and since starting it, I've used it several times for different purposes, such as writing scripts. There are lots of things you can do with it, so you should give it a try.
 
-On the topic of renewable energies, and helping the environment, if with this post you started considering making an investment on your own panels, then you have made day. With favorable weather conditions in your location, then you'll not only reduce your electricity bill, but you'll also help the world go greener 🌱
+On the topic of renewable energies, and helping the environment, if with this post you started considering making an investment on your own panels, then you have made my day. With favorable weather conditions in your location, then you'll not only reduce your electricity bill, but you'll also help the world go greener 🌱
 
 As always, hope you have liked reading this post, and if you have any questions just reach out at one of my socials (check the footer). See you around 👋
