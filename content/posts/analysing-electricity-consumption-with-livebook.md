@@ -5,28 +5,28 @@ author = "Zé Diogo"
 cover = "img/electricity-analysis-cover.jpg"
 coverCredit = "set of lightbulbs"
 keywords = ["elixir", "livebook", "vegalite", "explorer", "dataframe", "electricity"]
-description = "As the title implies, I wanted to analyse and discover patterns in my house electricity consumption. Which days consumed the most electricity, what hours do we have peak consumption, etc. On the other side, we also have some photovoltaic panels that produce energy for direct consumption. With both metrics, I can discover a lot of interesting heuristics, for example, the best hours to power the washing machine and take direct advantage of the sunlight we get in Portugal ☀️. For that, I'm using Elixir's **Livebook** for the whole data manipulation and visualization."
+description = "As the title implies, I wanted to analyse and discover patterns in my house's electricity consumption. Which days consumed the most electricity, and what hours do we have peak consumption? On the other side, we also have some photovoltaic panels that produce energy for direct consumption. With both metrics, I can discover a lot of interesting heuristics, for example, the best hours to power the washing machine and take direct advantage of the sunlight we get in Portugal ☀️. For that, I'm using Elixir's **Livebook** for the whole data manipulation and visualization."
 +++
 
-Back in April, I attended [ElixirConf EU](https://www.elixirconf.eu/) in Lisbon, and it was a really cool experience. But why does this matter for the blog post? Well, José Valim opened the conference with a Keynote where he talked mostly what was the state of Elixir and also demo-ed some *newish* interesting things from [Livebook](https://livebook.dev/) that had been presented during the [Launch Week](https://news.livebook.dev/label/45764). (The link for the video still isn't public, but I'll update this when it gets published). 
+Back in April, I attended [ElixirConf EU](https://www.elixirconf.eu/) in Lisbon, and it was a really cool experience. But why does this matter for the blog post? José Valim opened the conference with a Keynote where he talked mostly what was the state of Elixir and also demo-ed some *newish* interesting things from [Livebook](https://livebook.dev/). These had been presented during the [Launch Week](https://news.livebook.dev/label/45764). (The link for the video still isn't public, but I'll update this when it gets published). 
 
-I had already tried out **Livebook** in the past, and had seen the capabilities and power of `Smart Cells`, mostly for Machine Learning stuff, but I got amazed with the ease José started to transform and visualize data during the talk, using some of those "new" `Smart Cells`.
+I had already tried out **Livebook** in the past, and had seen the capabilities and power of `Smart Cells`, mostly for Machine Learning algorithms, but I got amazed with the ease José started to transform and visualize data during the talk, using some of those "new" `Smart Cells`.
 
 ## What are Smart Cells after all?
 
-The goal of this post is not to explain what **Livebook** is, and how great it is, but I feel that `Smart Cells` deserve at least a small reference and explanation. I may be wrong about the actual time they appeared, but I started hearing about them somewhere around [this announcement](https://news.livebook.dev/announcing-bumblebee-gpt2-stable-diffusion-and-more-in-elixir-3Op73O), where a bunch of `Smart Cells` for Machine Learning related things through [`Bumblebee`](https://github.com/elixir-nx/bumblebee). 
+The goal of this post is not to explain what **Livebook** is, and how great it is, but I feel that `Smart Cells` deserve at least a small reference and explanation. I may be wrong about the actual time they appeared, but I started hearing about them somewhere around [this announcement](https://news.livebook.dev/announcing-bumblebee-gpt2-stable-diffusion-and-more-in-elixir-3Op73O), with a set of `Smart Cells` for Machine Learning, through [`Bumblebee`](https://github.com/elixir-nx/bumblebee). 
 
 In [this blog post](https://news.livebook.dev/whats-new-in-livebook-0.8-4gQiEE) there is a great introduction to what you can achieve with them. I definitely advise you to read it, if you haven't before.
 
 ## Analysing my house's electricity consumption/production
 
-Let's start to dive into the goal of this blog post. As the title implies, I wanted to analyse and discover patterns in my house electricity consumption. Which days consumed the most electricity, what hours do we have peak consumption, etc. On the other side, we also have some photovoltaic panels that produce energy for direct consumption. With both metrics, I can discover a lot of interesting heuristics, for example, the best hours to power the washing machine and take direct advantage of the sunlight we get in Portugal ☀️. As we don't have any batteries, all the exceeding production gets sold to the grid, so by keeping track of this, we can also try to estimate our final profit/loss for the whole bill.
+Let's start to dive into the goal of this blog post. As the title implies, I wanted to analyse and discover patterns in my house's electricity consumption. Which days consumed the most electricity, and what hours do we have peak consumption? On the other side, we also have some photovoltaic panels that produce energy for direct consumption. With both metrics, I can discover a lot of interesting heuristics, for example, the best hours to power the washing machine and take direct advantage of the sunlight we get in Portugal ☀️. As we don't have any batteries, all the exceeding production gets sold to the grid, so by keeping track of this, we can also try to estimate our final profit/loss for the whole bill.
 
-This was something I wanted to do for some time, and I recently discovered that in Portugal you can register to [e-redes](https://www.e-redes.pt/pt-pt) and obtain a dataset with the amount of ***kWh*** being consumed by the house/injected in the grid, every 15 minutes, for each month. (If there are some people in Portugal reading this, and also want to get this information from **e-redes**, note that you need to have a *Contador Inteligente* first.)
+This was something I wanted to do for some time, and I recently discovered that in Portugal you can register to [e-redes](https://www.e-redes.pt/pt-pt). Inside the authenticated platform, it's possible to obtain a dataset with the amount of ***kWh*** being consumed by the house/injected in the grid, every 15 minutes. (If there are some people in Portugal reading this, and also want to get this information from **e-redes**, note that you need to have a *Smart Meter* first.)
 
 ## Inspecting and working with the dataset
 
-Well, the first thing is that the dataset you can export is not a `csv` file, as I was expecting initially. It's an `xls` with some more things that don't really matter for anything, so I first need to convert everything to a `csv` before doing any operation on top of it.
+In **e-redes**, the dataset you can export is not a `csv` file, as I was expecting initially. It's an `xls` with some extra information that we don't require for this experience. So, first, we need to convert everything to a clean `csv` before doing any operation on top of it.
 
 The final file has the following structure:
 
@@ -40,9 +40,9 @@ date,time,consumption,production
 ...
 ```
 
-In this blog post, I'm going to share what I did in my **Livebook** file, even though I know this post could be the actual **Livebook** file, given you can have markdown blocks there. 😅
+In this blog post, I'm going to only share parts of what I did in my **Livebook** file, and not the whole code and results. If you're interested in the entire project, let me know and I'll do my best to provide a version that includes randomized data.
 
-To start a new app, you usually set up dependencies, and then the respective aliases/imports. Not all of the dependencies are directly mentioned in this blog post, and some were automatically added by the **Livebook** app when adding `Smart Cells`.
+To start a new app, you usually set up dependencies, and then the respective aliases/imports. Not all of the dependencies are directly mentioned in this blog post, and some were automatically added by the **Livebook** app when setting up `Smart Cells`.
 
 ```elixir
 Mix.install(
@@ -61,7 +61,7 @@ Mix.install(
 )
 ```
 
-***Note**: Don't worry too much for now, on what these aliases/requires represent, as they will be mentioned forward in the text.*
+***Note**: Don't worry too much for now, about what these `alias`/`requires` represent, as they will be mentioned forward in the text.*
 
 ```elixir
 alias VegaLite
@@ -72,9 +72,9 @@ Nx.global_default_backend(EXLA.Backend)
 
 So, after setting everything up it is time to read the `csv` files and create an [Explorer.Dataframe](https://hexdocs.pm/explorer/Explorer.DataFrame.html). I won't enter into much detail on what it is and how it works because the docs do a really good job explaining it. I recommend you to look at the `Explorer` documentation, also. The main thing to gather is that it serves a similar purpose to [pandas DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) if you are familiar with Python.
 
-In the code snippet below, I'm working with three separate `csv` files because the export tool only enables exporting by month, and in a way, I can also showcase the power of `Explorer` using [concat_rows/1](https://hexdocs.pm/explorer/Explorer.DataFrame.html#concat_rows/1), to combine two or more data frames row-wise. (Obvsiouly I could build a single `csv` file beforehand, but it wouldn't be the same 😂). The part to read and load the file into a data frame, it's easy to grasp what it does.
+In the code snippet below, I'm working with three separate `csv` files because the export tool only enables exporting by month. That way, I can also showcase the power of `Explorer` using [concat_rows/1](https://hexdocs.pm/explorer/Explorer.DataFrame.html#concat_rows/1), to combine two or more data frames row-wise. (Obviously, I could build a single `csv` file beforehand). The part to read and load the file into a data frame, it's easy to grasp what it does.
 
-I only added June when finishing the blog post, so I just did the old **copy-paste**, but one more month and I'll refactor this into something generic. (First I want to make some benchmarks using `Stream`, `Enum`, comprehension lists, or something else, to build the final data frame.)
+I only added June data when finishing the blog post, so I just **copy-pasted**, but one more month and I'll refactor this into something generic. (First I want to make some benchmarks using `Stream`, `Enum`, comprehension lists, or something else, to build the final data frame.)
 
 ```elixir
 data_april = File.read!("2023-04.csv")
@@ -90,7 +90,7 @@ df = DataFrame.concat_rows([df_april, df_may, data_june])
 
 Previously, I highlighted what `Smart Cells` were, and how they could be helpful. This is now the part, where I got to use them. The image below shows an example of what were my first steps in analysing consumption and production values.
 
-Just by looking at the screenshot, you can understand what's happening. I'm using the data frame `df` with all the monthly data, grouping by the field `date` and then requesting a sum of the column `consumption`, storing everything in a new variable called `df_by_date`.
+Just by looking at the screenshot, you can understand what's happening. I'm using the data frame `df` with all the hourly values, grouping by the field `date` and then requesting a sum of the column `consumption`. In the end, the cell stores everything in a new variable called `df_by_date`.
 
 {{< image src="../../img/electricity-analysis/smart_cell_df_manipulation.png" alt="livebook data transform smart cell" position="center" style="border-radius: 8px;" >}}
 
@@ -100,7 +100,7 @@ The final result should look something like this:
 
 There are several more summary options, as well as different transformation combinations. This helped me a lot to get started, and after 5 minutes I already had information ready to be plotted. I'll go into that a bit later since I need to explain something else first.
 
-The values from consumption and production are provided in `kWh` (check the [Wikipedia page](https://en.wikipedia.org/wiki/Kilowatt-hour)). This means that it's wrong to sum up all the values I have. A consumption of `1.3 kWh` at `12h:30`, is the amount being pulled in at that moment, and to actually consume `1.3kW` the house would need to be at this value for a whole hour. Given I have values for every 15 minutes, the amount of `kW` consumed in an hour is approximately the average of those values.
+The values from consumption and production are provided in `kWh` (check the [Wikipedia page](https://en.wikipedia.org/wiki/Kilowatt-hour)). This means that it's wrong to directly sum up all the values. A consumption of `1.3 kWh` at `12h:30`, is the amount being pulled in at that moment, and to consume `1.3kW` the house would need to be at this value for a whole hour. Given we have values for every 15 minutes, the amount of `kW` consumed in an hour is approximately the average of those values. Here's an example:
 
 ```
 13:00 -> 0 kWh
@@ -112,7 +112,7 @@ kW consumed from 13h-14h => ~ avg([0, 0.06, 0.172, 0.088]) = 0.08 kW
 => NOT sum([0, 0.06, 0.172, 0.088]) = 0.32 kW
 ```
 
-What I did to solve this, and be able to analyse actual consumed/produced values, was to convert the `Smart Cell` into code, and directly edit it, to do some more complex operations. With the help of [DataFrame.put/4](https://hexdocs.pm/explorer/Explorer.DataFrame.html#put/4) and [Series.transform/2](https://hexdocs.pm/explorer/Explorer.Series.html#transform/2), you can easily make operations on top of existing columns to create new ones.
+To solve this, and be able to analyse actual consumed/produced values, I converted the respective `Smart Cell` into code, and directly edited it. That enables us to do more complex operations than the "no-code". With the help of [DataFrame.put/4](https://hexdocs.pm/explorer/Explorer.DataFrame.html#put/4) and [Series.transform/2](https://hexdocs.pm/explorer/Explorer.Series.html#transform/2), you can easily make extra calculations on top of existing columns to create new ones.
 
 ```elixir
 convert_to_hour = fn time ->
@@ -128,7 +128,7 @@ df_per_day =
   |> DF.summarise(production_mean: mean(production), consumption_mean: mean(consumption))
 ```
 
-I did other types of transformations on my data frame, but I think showing this one is enough for you to understand the idea. Now let's dive into the pretty part, getting some plots.
+I eventually did other types of transformations on my data frame, but I think showing this one is enough for you to understand the idea. The process was always very similar. Now let's dive into the pretty part, bringing in some plots.
 
 ## Drawing Plots
 
@@ -136,17 +136,17 @@ There's also a `Smart Cell` to quickly visualize a data frame, and that was the 
 
 {{< image src="../../img/electricity-analysis/smart_cell_plot.png" alt="livebook plot smart cell" position="center" style="border-radius: 8px;" >}}
 
-As in the first case, to do more complex things, such as customizing the axis, labels, and colours, you need to convert this cell into Elixir code, and you can go from there with a good base.
+As before, to do more complex things, such as customizing the axis, labels, and colours, you need to convert this cell into Elixir code, and you can go from there with a good base.
 
-The [Hexdocs for `VegaLite`](https://hexdocs.pm/vega_lite/VegaLite.html) have some of the things you can customize, but if you want to go the extra mile, you'll need to check the actual [`Vega-Lite` docs](https://vega.github.io/vega-lite/).
+The [Hexdocs for `VegaLite`](https://hexdocs.pm/vega_lite/VegaLite.html) have some of the information on what you can customize, but if you want to go the extra mile, you'll need to check the actual [`Vega-Lite` docs](https://vega.github.io/vega-lite/).
 
 ### Plots and Analysis
 
 Now it's time to dive into the juicy part. Seeing the results, and getting to analyse them.
 
-I mentioned earlier that we have the panels producing electricity for direct consumption of the house, and the rest is sold back to the grid. This is important to highlight because the values we have for consumption/production don't account for what was consumed directly by the house. After all, the power didn't go through the main "counter". For the math itself, it doesn't matter, because the values on each side cancel out, and our provider also doesn't care about that. So don't assume the following values are all that was consumed/produced.
+I mentioned earlier that we have the panels producing electricity for direct consumption of the house, and the rest is sold back to the grid. This is important to highlight because the values we have for consumption/production don't account for what was consumed directly by the house. After all, the power didn't go through the main "counter". For the math itself, it doesn't matter, because the values on each side cancel out, and our provider, likewise, doesn't track that. This way, the following values don't represent all that was consumed/produced.
 
-- The first plot represents the mean consumption (blue line) and the mean production (green line) per hour of the day. By looking at it, we can easily identify the *parabolic look-like* function for the production, which is directly related to the Sun's position relative to the house. There are also some spikes in both lines that we were able to map into some of our habits, and now the goal is to move some of the higher consumption after 20h:00, to the afternoon and take advantage of the higher production values. (We sell cheaper to the grid than we buy, so it's better for us to directly consume what we produce.)
+- The first plot depicts the mean consumption (blue line) and the mean production (green line) per hour of the day. We can effortlessly identify the *parabolic look-like* function for the production, which is directly related to the Sun's position relative to the house. There are also some spikes in both lines that we were able to map into some of our habits. Now, the goal is to move some of the higher consumption after 20h:00, to the afternoon and take advantage of the higher production values. (We sell cheaper to the grid than we buy, so it's better for us to directly consume what we produce.)
   -  The fact that during the afternoon energy is being sold, but also pulled in is something that I can't explain. At first sight, it seems that there would be enough energy to be consuming `0 kWh`, but I assume this has something to do with the power required.
 
 {{< image src="../../img/electricity-analysis/mean_per_hour.png" alt="mean consumption and production per hour" position="center" style="border-radius: 8px;" >}}
@@ -167,14 +167,14 @@ I mentioned earlier that we have the panels producing electricity for direct con
 {{< image src="../../img/electricity-analysis/daily_difference.png" alt="daily difference in kwh for consumption and production" position="center" style="border-radius: 8px;" >}}
 
 &nbsp;
-- This last one shows the difference aggregate by month. This way we can estimate how much we'll have to pay, and how much we'll receive by injecting the production into the grid. (There's also a profits plot, but I prefer not to show that one because the values are just rough estimates since there are other variables, like taxes, that change the results quite significantly.)
+- This last one shows the difference aggregate by month. This way we can estimate how much we'll have to pay, and how much we'll receive by injecting the production into the grid.
 
 {{< image src="../../img/electricity-analysis/monthly_difference.png" alt="monthly difference in kwh for consumption and production" position="center" style="border-radius: 8px;" >}}
 
 
 ## Possible Next Steps
 
-This **Livebook** has a lot of things that can be added in terms of complexity, and that may be helpful for the analysis. Below there are some examples of what I'm thinking to add and maybe write a follow-up post.
+This **Livebook** has various options that can be added in terms of complexity, which would improve the analysis process. Below there are a few potential additions and maybe I'll write a follow-up post, in the future.
 
 ### Using Scholar
 
@@ -196,4 +196,6 @@ The point here is that I could use one of these tools to also make any sort of p
 
 When I started working on this, it was probably the second time I used **Livebook**, and since starting it, I've used it several times for different purposes, such as writing scripts. There are lots of things you can do with it, so you should give it a try.
 
-As always, hope you have liked to read this post, and if you have any questions just reach out at one of my socials (check the footer). See you around 👋
+On the topic of renewable energies, and helping the environment, if with this post you started considering making an investment on your own panels, then you have made day. With favorable weather conditions in your location, then you'll not only reduce your electricity bill, but you'll also help the world go greener 🌱
+
+As always, hope you have liked reading this post, and if you have any questions just reach out at one of my socials (check the footer). See you around 👋
