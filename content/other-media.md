@@ -7,7 +7,7 @@ keywords=["videos", "talks", "podcasts", "zediogoviana", "elixir", "neo4j"]
 Here you can find a list of other things I have done online, but in a different media (talks/workshops, videos, podcasts, etc...).
 
 - **Genetic Algorithms With José Diogo Viana - EMx 211** \
-I joined the show to talk about, Genetic Algorithms to optimize an Asset Portfolio and a bit about what we do at **Finiam**. Check [Top End Devs page](https://topenddevs.com/podcasts/elixir-mix/episodes/genetic-algorithms-with-jose-diogo-viana-emx-211) for the full description and links. \
+I joined the show to talk about, Genetic Algorithms to optimize an Asset Portfolio and a bit about what we did at **Finiam**. Check [Top End Devs page](https://topenddevs.com/podcasts/elixir-mix/episodes/genetic-algorithms-with-jose-diogo-viana-emx-211) for the full description and links. \
 **[Mar 2023]** 
 
 &nbsp;
@@ -22,7 +22,7 @@ I was invited to talk about [a side project](https://github.com/zediogoviana/eth
 
 &nbsp;
 - **Software Testing Workshop (Elixir)** \
-A workshop with [José Resende](https://zepedroresende.github.io/) also from **[finiam](https://finiam.com)**. This workshop was for participants in the *CeSIUM Summer Camp*. (Video in portuguese only.)\
+A workshop with [José Resende](https://zepedroresende.github.io/). This workshop was for participants in the *CeSIUM Summer Camp*. (Video in portuguese only.)\
 **[Jul 2022]** 
 
 &nbsp;

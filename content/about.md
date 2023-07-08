@@ -1,19 +1,17 @@
 +++
 title = "About"
 cover = "img/myself.jpg"
-description="Hello there! My name is José Diogo Viana, but everyone calls me /(Zé|Diogo)/. I'm based in Portugal 🇵🇹 and at the moment I work at finiam, helping with the mission to change the financial world, by working with other businesses to launch their products to market."
-keywords=["about", "zediogoviana", "finiam", "elixir"]
+description="Hello there! My name is José Diogo Viana, but everyone calls me /(Zé|Diogo)/. I'm based in Portugal 🇵🇹 and at the moment I work at Remote, helping to make it easy for companies to hire, pay, and manage their teams globally."
+keywords=["about", "zediogoviana", "remote", "elixir"]
 +++
 
 # Hello there!
 
 My name is José Diogo Viana, but everyone calls me **/(Zé|Diogo)/**.
 
-I'm based in Portugal 🇵🇹 and at the moment I work at **[finiam](https://finiam.com)**, helping with the mission to change the financial world, by working with other businesses to launch their products to market.
+I'm based in Portugal 🇵🇹 and at the moment I work at **[Remote](https://remote.com)**, as an Elixir Backend Engineer, helping to make it easy for companies to hire, pay, and manage their teams globally.
 
-I work as a Fullstack Developer, but the Backend is where I spend most of my day, using Elixir + Phoenix or Ruby on Rails. I am always looking forward to learn new and cool things, either work related or just general knowledge.
-
-My language of preference is Elixir and I've been using it since 2019.
+Always looking forward to learn new and cool things, either work related or just general knowledge.
 
 On another note, in my free time, I'm a football goalkeeper coach since 2016, and you should check the [Football](/football) tab. 
 
@@ -25,9 +23,13 @@ Feel free to reach out, and say `Hi` on one of the socials below 👋
 
 ## Work
 
+- Backend Engineer \
+[Remote](https://remote.com) \
+**[Jul 2023 - Present]**
+
 - Full Stack Engineer \
 [Finiam](https://finiam.com) \
-**[Sep 2020 - Present]** 
+**[Sep 2020 - Jul 2023]** 
 
 - Full Stack Engineer - Apprenticeship \
 [Subvisual](https://subvisual.com/) \
