@@ -8,6 +8,7 @@ During my free time, I’m a football goalkeeper coach 🧤. Up until this momen
 
 Here's the list of past seasons:
 
+- **[23/24 Under 19](https://www.zerozero.pt/edition.php?id_edicao=176911)**: Ongoing;
 - **[22/23 Under 19](https://www.zerozero.pt/edicao.php?id_edicao=167727)**: 3rd Place;
 - **[21/22 Under 19](https://www.zerozero.pt/edicao.php?id_edicao=159185)**: 2nd Place; 
 - **[19/20 Under 19](https://www.zerozero.pt/edition.php?id=136146)**: 6th Place (season stopped halfway because of COVID);
