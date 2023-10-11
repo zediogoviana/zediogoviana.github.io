@@ -10,9 +10,14 @@ Most of these are available on my **[GitHub page](https://github.com/zediogovian
 
 ## Personal Projects
 
+- **[Albwer](https://www.albwer.com)** \
+If something happened to you now, and you couldn’t communicate your actions for a long time, what would you need to say to your family, friends or co-workers? Albwer allows you to configure messages to be delivered when you are absent for a certain amount of time. In its essence, it works as a Dead Man's Switch, but we believe it can be much more than that. Check [this post for more information](/posts/launching-my-side-project-albwer)\
+Fully built using Elixir + Phoenix.
+
+&nbsp;
 - **[ThePipeTracker](https://www.tipoprado.thepipetracker.com)** \
 A Production line tracking for SMEs. It's a Web Application for clients of an SME to track orders/packages inside a production pipeline. Together with production analysis plots and a dedicated module for delivery date prediction using Discrete Events Simulation theory (I wrote a blog post about this [here](https://zediogoviana.github.io/posts/simulations-with-elixir-and-the-actor-model/)). \
-API built with Elixir and Frontend built with React. Running in production for 3+ years and still helping the company with production efficiency.
+API built with Elixir and Frontend built with React. Running in production since 2019 and still helping the company with production efficiency.
 
 &nbsp;
 - **[Ethcule Poirot](https://github.com/zediogoviana/ethcule-poirot)** \
