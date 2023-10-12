@@ -28,7 +28,7 @@ Our idea starts with the approach to build a solution for the problem, but *as a
 
 That's where **Albwer** comes in. By the way, the name comes from joining ***Tyto Alba*** (the scientific name for our mascot, the Barn Owl) + ***Tower*** (where these owls can mostly be found). Why a Barn Owl, you may ask? Well, it's very much a joke from when we met back in high school. Maybe one day we talk more about it.
 
-This way, with **Albwer** if something happens, and we can't guide our loved ones into what to do next, our platform should be responsible for warning those previously selected people with some kind of instructions, information, wishes, etc. To make that possible, the platform needs to have some kind of recurring check (automatic or not) to validate if the User is still reachable.
+This way, with **Albwer** if something happens, and we can't guide our loved ones into what to do next, our platform should be responsible for warning those previously selected people with some kind of instructions, information, wishes, etc. To make that possible, the platform needs to have some kind of recurring check (automatic or not) to validate if the person is still reachable.
 
 Having a set of instructions can help ensure that everyone knows who to contact in an emergency and how to get in touch with them. This can be especially important if you are not able to communicate with the message recipients directly. For example, if you were to become incapacitated or pass away, your instructions could include things like how to access important documents and accounts, what your final wishes are, or any specific guidelines you have for the respective recipients.
 
@@ -63,11 +63,11 @@ We officially launched the first version on October 7th of this year (2023) [on 
 
 After the MVP we plan to add new features like:
 
- - possibility of choosing between email or automatic checks through an API, if you don't like receiving many emails.
- - the possibility of adding phone number recipients, and not just email ones.
- - different levels of trust for a **message** that you want to store with us.
+ - Possibility of choosing between email or automatic checks through an API, if you don't like receiving many emails.
+ - Possibility of adding phone number recipients, and not just email ones.
+ - Different levels of trust for a **message** that you want to store with us.
      -  A trust level represents the trust you require for the contents of a specific message. If you wish to have a message with sensitive content, and you are afraid that its contents are misused, you can try to use different trust levels that we provide. With each different level, you have less trust in our platform, but at the same time, it requires more configuration from your side. (You can learn more about these at our [FAQs](https://www.albwer.com#faqs).
- -  many more...
+ -  Many more...
 
 By the way, it may be relevant or not, but of course, this is all built with Elixir and Phoenix, so you can already understand how we're dealing with the resilience of the platform. If you don't know what I'm talking about, you can check [this blog post](https://zediogoviana.github.io/posts/how-to-build-concurrent-and-resilient-service-in-elixir/) I wrote some time ago 😅 
 
