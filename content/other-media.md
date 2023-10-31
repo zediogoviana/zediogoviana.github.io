@@ -6,6 +6,15 @@ keywords=["videos", "talks", "podcasts", "zediogoviana", "elixir", "neo4j"]
 
 Here you can find a list of other things I have done online, but in a different media (talks/workshops, videos, podcasts, etc...).
 
+
+- **NODES 2023 - Using Graph Theory to Model a Production Line and Predict Delivery Dates** \
+Almost everything in our day-to-day lives can be modeled as a graph, including production factories that haven't made the move to technological and digitized manufacturing. In the first part of this session, I dive into modeling a diverse and highly human-dependent production line using graph theory and using Neo4j to visualize it. In the second part, you'll see how to use graph theory and Discrete Event Simulations (DES) to predict the delivery dates for orders and packages.\
+**[Oct 2023]** 
+
+&nbsp;
+{{< youtube id="56yqbAMf-FI" title="NODES 2023 - Using Graph Theory to Model a Production Line and Predict Delivery Dates" >}}
+
+&nbsp;
 - **Genetic Algorithms With José Diogo Viana - EMx 211** \
 I joined the show to talk about, Genetic Algorithms to optimize an Asset Portfolio and a bit about what we did at **Finiam**. Check [Top End Devs page](https://topenddevs.com/podcasts/elixir-mix/episodes/genetic-algorithms-with-jose-diogo-viana-emx-211) for the full description and links. \
 **[Mar 2023]** 
