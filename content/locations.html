@@ -14,22 +14,4 @@ keywords=["beers", "locations", "zediogoviana"]
 
 <p>The smaller <span style="color:#23B0FF">blue</span> highlights represent the locations I have visited personally. On a quick note, I don't have beer bottles from all places I've been to, as I only started collecting them around 2017.
 
-<div class="iframe-container">
-    <div class="iframe-loading" id="loading">Loading</div>
-
-    <iframe
-      id="beer-map"
-      style="opacity: 0;"
-      width="100%"
-      height="450"
-      frameborder="0"
-      title="Felt Map"
-      sandbox="allow-same-origin allow-scripts"
-      src="https://felt.com/embed/map/Beer-Travel-Map-E9Bfaa9CUKRie9AwokRQK9CVBB?lat=45.08913&lon=6.937866&zoom=2"
-      onload="
-        document.getElementById('loading').style.display='none';
-        document.getElementById('beer-map').style.opacity='1';
-      "
-    >
-    </iframe>
-</div>
+{{< image src="../../img/locations.png" alt="locations map" position="center" style="border-radius: 8px; margin-top: 56px;" >}}
