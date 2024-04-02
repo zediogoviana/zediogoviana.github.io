@@ -67,19 +67,21 @@ paginate = 5
   [languages.en]
     languageName = "English"
     title = "zediogoviana"
-    subtitle = "My name is José Diogo Viana, but everyone calls me /(Zé|Diogo)/. In this place you can find posts about random things I explored either in my free time or discoveries at work. Look around the post list or other website pages to know a bit more about what I do: 👨🏼‍💻🍺⚽️"
-    owner = "zediogoviana"
-    keywords = ["personal website", "development", "elixir", "backend", "zediogoviana"]
     copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    newerPosts = "Newer posts"
-    olderPosts = "Older posts"
-    missingContentMessage = "Oh no! This page doesn't exist... "
-    missingBackButtonLabel = "Back to home page"
-    minuteReadingTime = "min read"
-    words = "words"
+
+    [languages.en.params]
+      owner = "zediogoviana"
+      subtitle = "My name is José Diogo Viana, but everyone calls me /(Zé|Diogo)/. In this place you can find posts about random things I explored either in my free time or discoveries at work. Look around the post list or other website pages to know a bit more about what I do: 👨🏼‍💻🍺⚽️"
+      keywords = ["personal website", "development", "elixir", "backend", "zediogoviana"]
+      olderPosts = "Older posts"
+      readOtherPosts = "Read other posts"
+      newerPosts = "Newer posts"
+      readMore = "Read more"
+      menuMore = "Show more"
+      missingBackButtonLabel = "Back to home page"
+      missingContentMessage = "Oh no! This page doesn't exist... "
+      minuteReadingTime = "min read"
+      words = "words"
 
     [languages.en.params.logo]
       logoText = "zediogoviana"
