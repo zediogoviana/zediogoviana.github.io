@@ -9,7 +9,7 @@ keywords=["about", "zediogoviana", "remote", "elixir", "albwer"]
 
 My name is José Diogo Viana, but everyone calls me **/(Zé|Diogo)/**.
 
-I'm based in Portugal 🇵🇹 and at the moment I work at **[Remote](https://remote.com)**, as an Elixir Backend Engineer, helping to make it easy for companies to hire, pay, and manage their teams globally.
+I'm based in Portugal 🇵🇹 and at the moment I work at **[Remote](https://remote.com)**, as an Elixir Senior Backend Engineer, helping to make it easy for companies to hire, pay, and manage their teams globally.
 
 At night, I'm building **[Albwer](https://www.albwer.com)**, with a great friend.
 
@@ -25,9 +25,12 @@ Feel free to reach out, and say `Hi` on one of the socials below 👋
 
 ## Work
 
-- Backend Engineer \
+- Senior Backend Engineer \
 [Remote](https://remote.com) \
-**[Jul 2023 - Present]**
+**[Oct 2024 - Present]**
+
+  - Backend Engineer \
+  **[Jul 2023 - Oct 2024]**
 
 - Full Stack Engineer \
 [Finiam](https://finiam.com) \
