@@ -1,7 +1,7 @@
 +++
 title = "Side Projects"
 description="In this page you can check some of my Personal projects, together with others I helped to develop, when I was at finiam."
-keywords=["projects", "zediogoviana", "finiam", "remote", "elixir", "thepipetracker", "hackathons"]
+keywords=["projects", "zediogoviana", "finiam", "remote", "elixir", "thepipetracker", "ponteiro", "hackathons"]
 +++
 
 I've always been very pro-active and wanting to try out new things. So, in this page you can check some of my **Personal** projects, together with others I helped to develop, when I was at **[finiam](https://finiam.com)**.
@@ -10,6 +10,11 @@ Most of these are available on my **[GitHub page](https://github.com/zediogovian
 
 ## Personal Projects
 
+- **[Ponteiro](https://ponteiro.pt)** \
+An independent index of the secondary luxury watch market in Portugal. Ponteiro aggregates pre-owned, never-worn and collector watches from authorized retailers and independent sellers across the country, tracking prices over time and making it easy to filter by brand, reference and condition. The goal is to bring transparent pricing data to collectors and buyers, and visibility to verified dealers.\
+Fully built using Elixir + Phoenix.
+
+&nbsp;
 - **[Albwer](https://www.albwer.com)** \
 If something happened to you now, and you couldn’t communicate your actions for a long time, what would you need to say to your family, friends or co-workers? Albwer allows you to configure messages to be delivered when you are absent for a certain amount of time. In its essence, it works as a Dead Man's Switch, but we believe it can be much more than that. Check [this post for more information](/posts/launching-my-side-project-albwer)\
 Fully built using Elixir + Phoenix.

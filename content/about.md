@@ -1,8 +1,8 @@
 +++
 title = "About"
 cover = "img/myself.jpg"
-description="Hello there! My name is José Diogo Viana, but everyone calls me /(Zé|Diogo)/. I'm based in Portugal 🇵🇹 and at the moment I work at Remote, helping to make it easy for companies to hire, pay, and manage their teams globally. At night, I'm building Albwer."
-keywords=["about", "zediogoviana", "remote", "elixir", "albwer"]
+description="Hello there! My name is José Diogo Viana, but everyone calls me /(Zé|Diogo)/. I'm based in Portugal 🇵🇹 and at the moment I work at Remote, helping to make it easy for companies to hire, pay, and manage their teams globally. At night, I'm building Albwer and Ponteiro."
+keywords=["about", "zediogoviana", "remote", "elixir", "albwer", "ponteiro"]
 +++
 
 # Hello there!
@@ -11,7 +11,7 @@ My name is José Diogo Viana, but everyone calls me **/(Zé|Diogo)/**.
 
 I'm based in Portugal 🇵🇹 and at the moment I work at **[Remote](https://remote.com)**, as an Elixir Senior Backend Engineer, helping to make it easy for companies to hire, pay, and manage their teams globally.
 
-At night, I'm building **[Albwer](https://www.albwer.com)**, with a great friend.
+At night, I'm building **[Albwer](https://www.albwer.com)**, with a great friend, and **[Ponteiro](https://ponteiro.pt)**.
 
 Always looking forward to learn new and cool things, either work related or just general knowledge.
 
